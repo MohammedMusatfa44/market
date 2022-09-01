@@ -1,0 +1,60 @@
+@mixin anmi($anmi-name) {
+    @keyframes anmi-#{$anmi-name} {
+        @content;
+        
+    }
+    
+}
+
+@mixin media($word) {
+
+    @if $word == mopile {
+
+        @media (max-width:767px) {
+            @content
+            
+        }
+
+    }
+    @else if $word == small {
+
+        @media (min-width:767px) and (max-width:991px) {
+            @content
+            
+        }
+
+    }
+    @else if $word == md {
+
+        @media (min-width:992px) and (max-width:1199px) {
+            @content
+            
+        }
+
+    }
+    @else if $word == large {
+
+        @media (min-width:1200px) {
+            @content
+            
+        }
+
+    }
+    @else if $word == small2 {
+
+        @media (max-width:450px) {
+            @content
+            
+        }
+
+    }
+    @else if $word == small3 {
+
+        @media (max-width:550px) {
+            @content
+            
+        }
+
+    }
+    
+}
